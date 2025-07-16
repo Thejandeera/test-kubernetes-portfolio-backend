@@ -17,3 +17,8 @@ spec:
           image: thejandeera/test-kubernetes-project:latest
           ports:
             - containerPort: 8080
+          env:
+            - name: FRONTEND_URL
+              value: "http://localhost:5173"  # replace with your actual frontend URL
+            - name: DATASOURCE_URL
+              value: "mongodb+srv://thejandeera:Thejan12345@cluster0.dd1hdgu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
