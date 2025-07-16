@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-kubernetes-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: test-kubernetes-backend
+  template:
+    metadata:
+      labels:
+        app: test-kubernetes-backend
+    spec:
+      containers:
+        - name: test-kubernetes-backend
+          image: thejandeera/test-kubernetes-project:latest
+          ports:
+            - containerPort: 8080
