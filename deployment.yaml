@@ -14,7 +14,9 @@ spec:
     spec:
       containers:
         - name: test-kubernetes-backend
-          image: thejandeera/test-kubernetes-project:latest
+          image: thejandeera/test-kubernetes-project:latest  # initial fallback
+imagePullPolicy: Always
+
           ports:
             - containerPort: 8080
           env:
